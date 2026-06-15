@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What Is Claude Fable 5? — Complete Guide (2026) | Fable 5 Explained</title>
+  <meta name="description" content="A comprehensive guide to Claude Fable 5: Anthropic's first public Mythos-class model. Benchmarks, capabilities, pricing, safety, and everything you need to know.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo">Fable 5 <span>Explained</span></a>
+    <ul class="nav-links">
+      <li><a href="article1-what-is-fable5.html">What Is Fable 5</a></li>
+      <li><a href="article2-fable5-banned.html">The Ban</a></li>
+      <li><a href="article3-fable5-vs-others.html">Comparisons</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+  <div class="container">
+    <div class="article-header">
+      <h1>What Is Claude Fable 5? The Complete Guide</h1>
+      <div class="byline">Published June 10, 2026 · Updated June 15, 2026 · ~1,700 words</div>
+    </div>
+
+    <article>
+      <p>On <strong>June 9, 2026</strong>, Anthropic released <strong>Claude Fable 5</strong> — a model that instantly reset the bar for publicly available AI. Alongside it came <strong>Claude Mythos 5</strong>, a sibling model with even fewer restrictions, reserved for a small set of vetted institutions. The two share the exact same underlying architecture. The difference? Fable 5 ships with a safety classifier designed for public deployment; Mythos 5 does not.</p>
+
+      <p>This was the first time Anthropic opened a <strong>Mythos-class</strong> model to the general public. And for four days, it was the strongest AI any ordinary user could access. Then the US government stepped in.</p>
+
+      <h2>What Makes Fable 5 Different?</h2>
+
+      <p>Fable 5 is not a small iteration. It arrived just <strong>11 days</strong> after Claude Opus 4.8, yet the performance gap is closer to a generational leap than a point release. Anthropic describes it as excelling at "longer, more complex tasks" — and the benchmark data backs that up dramatically.</p>
+
+      <p>The model can process <strong>millions of tokens</strong> in a single context window and uses an internal note-taking mechanism to track its own reasoning across extended sessions. This means it doesn't lose the plot halfway through a complex project. It remembers. It plans. It executes.</p>
+
+      <h2>Benchmark Performance: By the Numbers</h2>
+
+      <p>The numbers are striking. On <strong>SWE-Bench Pro</strong>, the hardest real-world software engineering benchmark available, here's how the landscape looked on June 10:</p>
+
+      <table class="benchmark-table">
+        <thead>
+          <tr><th>Model</th><th>SWE-Bench Pro Score</th></tr>
+        </thead>
+        <tbody>
+          <tr class="best"><td class="highlight">Claude Fable 5</td><td class="highlight">80.3%</td></tr>
+          <tr><td>Claude Opus 4.8</td><td>69.2%</td></tr>
+          <tr><td>Claude Mythos Preview</td><td>77.8%</td></tr>
+          <tr><td>GPT-5.5</td><td>58.6%</td></tr>
+          <tr><td>Gemini 3.1 Pro</td><td>54.2%</td></tr>
+        </tbody>
+      </table>
+
+      <p>An 11-percentage-point lead over the next-best public model — and it even beat Anthropic's own restricted Mythos Preview (77.8%). That kind of single-generation jump is almost unheard of.</p>
+
+      <p>On <strong>FrontierCode Diamond</strong>, a benchmark for elite competitive programming problems, the gap was even wider:</p>
+
+      <table class="benchmark-table">
+        <thead>
+          <tr><th>Model</th><th>FrontierCode Diamond</th></tr>
+        </thead>
+        <tbody>
+          <tr class="best"><td class="highlight">Claude Fable 5</td><td class="highlight">29.3%</td></tr>
+          <tr><td>Claude Opus 4.8</td><td>13.4%</td></tr>
+          <tr><td>GPT-5.5</td><td>5.7%</td></tr>
+        </tbody>
+      </table>
+
+      <p>Fable 5 more than <strong>doubled</strong> Opus 4.8's score and outperformed GPT-5.5 by over 5x. These are problems that stump most human engineers.</p>
+
+      <h2>Real-World Capabilities</h2>
+
+      <p>Benchmarks tell one story. What Fable 5 did in the wild tells another.</p>
+
+      <h3>Stripe's 50-Million-Line Migration</h3>
+
+      <p>Payment giant <strong>Stripe</strong> ran an early test: migrate a <strong>50-million-line Ruby codebase</strong>. Fable 5 completed the entire migration in <strong>one day</strong>. The same project had been estimated to take a human engineering team <strong>two months</strong>. That's roughly a 60x speedup on a real production workload.</p>
+
+      <h3>Pokémon FireRed — Screenshots Only</h3>
+
+      <p>Fable 5 played through <strong>Pokémon FireRed</strong> using nothing but raw screenshots as input. No API, no game-specific tools, no extra instrumentation. It read the pixels, figured out the game mechanics, and played to completion. This was a long-standing informal stress test for vision-capable AI agents — and Fable 5 was the first to clear it purely visually.</p>
+
+      <h3>Ethan Mollick's 9-Hour Autonomous Research Project</h3>
+
+      <p>Wharton professor <strong>Ethan Mollick</strong> fed Fable 5 a <strong>15-page requirements document</strong>. Nine hours later, he had a finished deliverable. The model autonomously spawned sub-agents, conducted research, wrote drafts, edited, scrapped bad approaches, and started over — all with <strong>zero human intervention</strong>. This is the kind of long-horizon autonomous work that previous models couldn't sustain.</p>
+
+      <h2>Safety Architecture: The Automatic Downgrade</h2>
+
+      <p>Fable 5's safety system is unusual. Rather than simply refusing risky queries, it employs an <strong>automatic safety downgrade</strong> mechanism. When the model's safety classifier detects a request involving high-risk domains — cybersecurity, biochemical topics, model distillation — it doesn't block the user. Instead, it <strong>silently switches</strong> to Claude Opus 4.8 to generate the response.</p>
+
+      <p>The user may never know the model changed. Anthropic reports that this classifier fires in fewer than <strong>5% of sessions</strong>, and over <strong>1,000 hours of external red-teaming</strong> found no universal jailbreak method.</p>
+
+      <p>This architecture is both clever and controversial. Clever because it preserves the user experience for legitimate queries while maintaining safety boundaries. Controversial because a silent downgrade means users can't always trust which model they're interacting with — and the classifier itself becomes a single point of policy enforcement.</p>
+
+      <h2>Pricing and Availability (Before the Ban)</h2>
+
+      <p>Fable 5 launched with pricing set at:</p>
+      <ul>
+        <li><strong>$10 per million input tokens</strong></li>
+        <li><strong>$50 per million output tokens</strong></li>
+      </ul>
+      <p>This is exactly <strong>double</strong> Opus 4.8's pricing ($5/$25), but less than half of Mythos Preview. For Pro, Max, Team, and Enterprise subscribers, Fable 5 was <strong>free from June 9 through June 22</strong>. After that, usage would require credits.</p>
+
+      <p>The model was available through:</p>
+      <ul>
+        <li>Claude web and mobile apps</li>
+        <li>Claude API (<code>claude-fable-5</code>)</li>
+        <li>Amazon Bedrock</li>
+        <li>GitHub Copilot</li>
+        <li>Microsoft Foundry</li>
+      </ul>
+
+      <p>Then, on <strong>June 12 at 5:21 PM ET</strong>, everything changed.</p>
+
+      <p style="margin-top: 40px;"><a href="article2-fable5-banned.html" class="cta-btn">Read: Why Fable 5 Was Banned →</a></p>
+    </article>
+  </div>
+</main>
+
+<footer>
+  <p>Fable 5 Explained &copy; 2026 · All data from Anthropic official releases and Vellum independent benchmarks.</p>
+</footer>
+
+</body>
+</html>
