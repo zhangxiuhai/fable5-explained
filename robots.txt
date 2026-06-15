@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://fable5explained.com/sitemap.xml
+Sitemap: https://www.fable5explained.com/sitemap.xml
